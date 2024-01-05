@@ -20,4 +20,10 @@ data_true["class"] = 1
 data_fake.shape, data_true.shape
 print(data_fake.shape, data_true.shape)
 
-dataf_manual_testing = data_fake.tail(10)
+dataF_manual_testing = data_fake.tail(10)
+for i in range(23480,23470,-1):
+    data_fake.drop([i], axis = 0, inplace = True)
+
+dataT_manual_testing = data_true.tail(10)
+for i in range(21416, 21406, -1):
+    data_true.drop([i], axis = 0, inplace = True)
