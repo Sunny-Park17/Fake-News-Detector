@@ -27,3 +27,6 @@ for i in range(23480,23470,-1):
 dataT_manual_testing = data_true.tail(10)
 for i in range(21416, 21406, -1):
     data_true.drop([i], axis = 0, inplace = True)
+
+data_merge = pd.concat([data_fake, data_true], axis = 0)
+data_merge.head(10)
