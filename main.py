@@ -30,3 +30,9 @@ for i in range(21416, 21406, -1):
 
 data_merge = pd.concat([data_fake, data_true], axis = 0)
 data_merge.head(10)
+
+data = data_merge.drop(['title','subject','date'], axis = 1)
+
+def wordopt(text):
+    text = text.lower()
+    text = re.sub('\[,*?\]', '', text)
